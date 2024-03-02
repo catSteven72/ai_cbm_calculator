@@ -52,7 +52,7 @@ function ProcessForm() {
         e.preventDefault();
         const csrfToken = getCsrfToken();
         try {
-            const response = await fetch('http://localhost:8000/ai/process/', {
+            const response = await fetch('${process.env.REACT_APP_API_URL}', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
