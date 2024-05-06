@@ -11,7 +11,6 @@ class ProcessFormAPI(APIView):
 
     def post(self, request):
         input_text = request.data.get("inputText", "")
-        print(input_text)
 
         cleaned_input = bleach.clean(input_text)
         if not cleaned_input:
